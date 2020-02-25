@@ -1,0 +1,3 @@
+#!/bin/bash
+#adds all the relevant files to git
+git add git_add_script README.txt quad_riblet/0 quad_riblet/system quad_riblet/constant quad_riblet/run_script quad_riblet/combine_script quad_riblet/constants.dat quad_riblet/constants2.dat
