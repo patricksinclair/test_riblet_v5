@@ -19,10 +19,10 @@ phases (water air);
 
 water
 {
-    //
+    //represents ketchup here
     transportModel  Newtonian;
-    nu              2200.e-5;
-    rho             1450;
+    nu              0.04348;
+    rho             1150;
 }
 
 air

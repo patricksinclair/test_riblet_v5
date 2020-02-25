@@ -4,6 +4,7 @@
 #First delete everything
 foamListTimes -rm
 rm -r processor*
+cp 0/alpha.water.orig 0/alpha.water
 #rm 0/alpha.water
 
 #now set everything up
