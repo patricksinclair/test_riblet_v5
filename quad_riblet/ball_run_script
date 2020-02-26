@@ -2,6 +2,7 @@
 #This is a script to reset the openfoam case and run it again.
 #This one has been modified for use on the ball cluster.  Due to the differing openfoam versions, we don't remove alpha.water, and we use more processors
 #First delete everything
+foam_source
 foamListTimes -rm
 rm -r processor*
 cp 0/alpha.water.orig 0/alpha.water
