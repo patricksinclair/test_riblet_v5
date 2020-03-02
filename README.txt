@@ -7,3 +7,15 @@ Boundary conditions changed to the ones from the pipe pdf, the ones used in the 
 Uniform U at the LHS, then hopefully poiseuille flow develops before it reaches the riblets.
 ///////////////////////////////////
 Increased inlet velocity to 5 ms^-1, and also increased inlet channel length.
+/////////////////////////////////////////////////////////////////////////////
+Surface tension is far too high, changed it to 0.034.  This might still be too high, seeing as the surrounding fluid is water.  But see how things go for now
+//////////////////////////////////////////////////////////////////////////////
+Modified blockmeshdict so that it now has finer grading towards the riblet apexes.
+Made the mesh overall coarser to try and speed things up.
+
+Changed the inlet velocity based on the AkzoNobel riblet paper, and under the assumption that the flow profile has a linear gradient irl
+Based on v = ([simulation h]/[experimental h])*[experimental v].  This gives us a v = 0.18 ms^-1.
+
+We'll just use some ballpark numbers for the transport properties for now.  set both densities equal to water (1e3), make biofilm 1000 times more viscous.
+
+Let's also try a few different surface tensions to see if that makes much of a difference

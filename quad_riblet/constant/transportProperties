@@ -21,8 +21,8 @@ water
 {
     //represents ketchup here
     transportModel  Newtonian;
-    nu              0.04348;
-    rho             1150;
+    nu              1e-3;
+    rho             1000;
 }
 
 air
@@ -33,6 +33,6 @@ air
     rho             1000;
 }
 
-sigma            0.1;
+sigma            0.01;
 
 // ************************************************************************* //
