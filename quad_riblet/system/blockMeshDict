@@ -151,7 +151,7 @@ fluidY_nC 18; //the n0. of y-cells in the blocks in the surrounding fluid (e.g. 
 LBlockX_nC 20; //no. of x-cells in the inlet blocks
 RBlockX_nC 20; //no. of x-cells in the outlet blocks
 
-r_grading 4; //grading of the mesh on the LHS of the riblet
+r_grading 4; //grading of the mesh on the RHS of the riblet
 l_grading #calc "1./$r_grading";
 
 
