@@ -14,6 +14,7 @@ FoamFile
     object      transportProperties;
 }
 // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+#includeIfPresent "../constants.dat"
 
 phases (water air);
 
@@ -33,6 +34,6 @@ air
     rho             1000;
 }
 
-sigma            0.01;
+sigma            $sigma;
 
 // ************************************************************************* //
