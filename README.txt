@@ -18,4 +18,6 @@ Based on v = ([simulation h]/[experimental h])*[experimental v].  This gives us 
 
 We'll just use some ballpark numbers for the transport properties for now.  set both densities equal to water (1e3), make biofilm 1000 times more viscous.
 
-Let's also try a few different surface tensions to see if that makes much of a difference
+Let's also try a few different surface tensions to see if that makes much of a difference.
+///////////////////////////////////////////////////////
+Going to run it for longer and also reduce the surface tension by factor of 10.
