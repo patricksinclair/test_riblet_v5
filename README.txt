@@ -21,3 +21,6 @@ We'll just use some ballpark numbers for the transport properties for now.  set 
 Let's also try a few different surface tensions to see if that makes much of a difference.
 ///////////////////////////////////////////////////////
 Going to run it for longer and also reduce the surface tension by factor of 10.
+//////////////////////////////////////////////////////////////////////////
+surface tension is currently at 1e-4.
+Added mesh grading to the y-direction so it's more concentrated at the riblet peaks.  This way we can hopefully use a coarser overall mesh.
