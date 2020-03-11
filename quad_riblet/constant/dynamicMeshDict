@@ -21,7 +21,7 @@ dynamicFvMesh   dynamicRefine2DFvMesh;
 
 dynamicRefine2DFvMeshCoeffs{
 
-nBufferLayersR 2;
+nBufferLayersR 1;
 
 // How often to refine
 refineInterval  1;

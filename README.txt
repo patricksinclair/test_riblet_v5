@@ -24,3 +24,5 @@ Going to run it for longer and also reduce the surface tension by factor of 10.
 //////////////////////////////////////////////////////////////////////////
 surface tension is currently at 1e-4.
 Added mesh grading to the y-direction so it's more concentrated at the riblet peaks.  This way we can hopefully use a coarser overall mesh.
+Increased courant number to 0.95.
+Changed nBufferlayersR to from 2 -> 1 in constant/dynamicMeshDict.
