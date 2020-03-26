@@ -13,4 +13,4 @@ setFields
 decomposePar
 
 #now run the case in parallel
-mpirun -np 16 interFoam -parallel > log &
+mpirun -np 20 interFoam -parallel > log &
