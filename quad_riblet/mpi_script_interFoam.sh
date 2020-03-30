@@ -1,6 +1,6 @@
 #!/bin/sh
 
-#$ -N myJobName # job name
+#$ -N d_92_thickBiofilm_job # job name
 #$ -V           # use all shell environment variables
 #$ -cwd         # run job in working directory
 #$ -j y         # merge stdout and stderr to one file
@@ -13,7 +13,7 @@
 # Choose a parallel environment:
 # Check options with "qconf -spl"
 # Check details with "qconf -sp <pe-name>"
-#$ -pe mpi 40        # asks for 40 processes for an mpi job
+#$ -pe mpi 40        # asks for 40 processors for an mpi job
 
 # Send mail at submission and completion of script
 #$ -m be
