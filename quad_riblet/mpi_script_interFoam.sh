@@ -53,4 +53,3 @@ time {
 mpirun -np $NSLOTS interFoam -parallel > log
 
 }
-
