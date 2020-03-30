@@ -26,3 +26,5 @@ surface tension is currently at 1e-4.
 Added mesh grading to the y-direction so it's more concentrated at the riblet peaks.  This way we can hopefully use a coarser overall mesh.
 Increased courant number to 0.95.
 Changed nBufferlayersR to from 2 -> 1 in constant/dynamicMeshDict.
+/////////////////////////////////////////////////////////////////
+There was some numerical noise, so I've added an x-gradient to the inlet/outlet x-cells refining.

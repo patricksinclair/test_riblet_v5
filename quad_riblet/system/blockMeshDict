@@ -143,19 +143,23 @@ vertices
 );
 
 ribletX_nC 8; //the no. of x-cells in the blocks on/above the riblets
-plateauX_nC 5; //the no. of x-cells in the blocks on/above the space between riblets
+plateauX_nC 4; //the no. of x-cells in the blocks on/above the space between riblets
 
 surfaceY_nC 6; //the no. of y-cells in the blocks on the surface
-fluidY_nC 8; //the n0. of y-cells in the blocks in the surrounding fluid (e.g. ocean)
+fluidY_nC 6; //the n0. of y-cells in the blocks in the surrounding fluid (e.g. ocean)
 
-LBlockX_nC 32; //no. of x-cells in the inlet blocks
-RBlockX_nC 12; //no. of x-cells in the outlet blocks
+LBlockX_nC 25; //no. of x-cells in the inlet blocks
+RBlockX_nC 20; //no. of x-cells in the outlet blocks
 
 r_grading_x 2.5; //grading of the x-mesh on the RHS of the riblet
 l_grading_x #calc "1./$r_grading_x";
 
 t_grading_y 8; //grading of the y-mesh on the bottom blocks (riblet surface)
 b_grading_y #calc "1./2.";
+
+outlet_xGrading 10; //x-grading of the outlet x-cells
+inlet_xGrading #calc "1./$outlet_xGrading"; //x-grading of the inlet x-cells
+
 
 
 blocks
@@ -196,10 +200,10 @@ hex (34 35 52 51 89 90 107 106) 	($ribletX_nC $fluidY_nC 1) 	simpleGrading ($l_g
 hex (35 36 53 52 90 91 108 107) 	($ribletX_nC $fluidY_nC 1) 	simpleGrading ($r_grading_x $t_grading_y 1)      	//riblet 3, block 6
 hex (36 37 54 53 91 92 109 108) 	($plateauX_nC $fluidY_nC 1) 	simpleGrading (1 $t_grading_y 1)      	//riblet 3, block 7
 
-hex (110 0 21 111 113 55 76 114) 	($LBlockX_nC $surfaceY_nC 1) 	simpleGrading (1 $b_grading_y 1)        	//LHS, block 0
-hex (111 21 38 112 114 76 93 115) 	($LBlockX_nC $fluidY_nC 1) 	simpleGrading (1 $t_grading_y 1)        	//LHS, block 1
-hex (20 116 117 37 75 119 120 92) 	($RBlockX_nC $surfaceY_nC 1) 	simpleGrading (1 $b_grading_y 1)        	//RHS, block 0
-hex (37 117 118 54 92 120 121 109) 	($RBlockX_nC $fluidY_nC 1) 	simpleGrading (1 $t_grading_y 1)        	//RHS, block 1
+hex (110 0 21 111 113 55 76 114) 	($LBlockX_nC $surfaceY_nC 1) 	simpleGrading ($inlet_xGrading $b_grading_y 1)        	//LHS, block 0
+hex (111 21 38 112 114 76 93 115) 	($LBlockX_nC $fluidY_nC 1) 	simpleGrading ($inlet_xGrading $t_grading_y 1)        	//LHS, block 1
+hex (20 116 117 37 75 119 120 92) 	($RBlockX_nC $surfaceY_nC 1) 	simpleGrading ($outlet_xGrading $b_grading_y 1)        	//RHS, block 0
+hex (37 117 118 54 92 120 121 109) 	($RBlockX_nC $fluidY_nC 1) 	simpleGrading ($outlet_xGrading $t_grading_y 1)        	//RHS, block 1
 );
 
 edges
